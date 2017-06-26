@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#160000"
+    android:background="#795548"
     >
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,164 +16,176 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="즐겨찾기"
-            android:textSize="35dp"
-            android:textColor="#07F"/>
+            android:textSize="35sp"
+            android:textColor="#BCAAA4"/>
     </LinearLayout>
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="#000" />
+        android:background="#3E2723" />
     <LinearLayout
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="9"
-        android:background="#cfcdcd"
+        android:background="#D7CCC8"
         >
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical"
+            android:background="#BCAAA4"
             >
             <TextView
                 android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:text="종목명"/>
             <TextView
                 android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:text="회차"/>
             <TextView
                 android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:text="필기접수"/>
 
             <TextView
                 android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:text="필기시험"/>
 
             <TextView
                 android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:text="필기발표"/>
             <TextView
                 android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:text="서류제출"/>
 
             <TextView
                 android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:text="실기접수"/>
 
             <TextView
                 android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:text="실기시험"/>
 
             <TextView
                 android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:text="합격자발표"/>
 
         </LinearLayout>
+
         <LinearLayout
-            android:background="#cfcdcd"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1.9"
-            android:orientation="vertical"
-            >
-            <TextView
-                android:layout_marginTop="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:id="@+id/name_textview"/>
-            <TextView
-                android:layout_marginTop="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:id="@+id/number_textview"/>
-            <TextView
-                android:layout_marginTop="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:id="@+id/drs_textview"/>
+            android:background="#D7CCC8"
+            android:orientation="vertical">
 
             <TextView
-                android:layout_marginTop="5dp"
+                android:id="@+id/name_textview"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:id="@+id/des_textview"/>
+                android:layout_marginTop="5dp"
+                android:layout_weight="1" />
 
             <TextView
-                android:layout_marginTop="5dp"
+                android:id="@+id/number_textview"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:id="@+id/docpass_textview"/>
-            <TextView
                 android:layout_marginTop="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:id="@+id/dss_textview"/>
+                android:layout_weight="1" />
 
             <TextView
-                android:layout_marginTop="5dp"
+                android:id="@+id/drs_textview"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:id="@+id/prs_textview"/>
+                android:layout_marginTop="5dp"
+                android:layout_weight="1" />
 
             <TextView
-                android:layout_marginTop="5dp"
+                android:id="@+id/des_textview"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:id="@+id/pes_textview"/>
+                android:layout_marginTop="5dp"
+                android:layout_weight="1" />
 
             <TextView
-                android:layout_marginTop="5dp"
+                android:id="@+id/docpass_textview"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:id="@+id/pracpass_textview"/>
+                android:layout_marginTop="5dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/dss_textview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/prs_textview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/pes_textview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/pracpass_textview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1" />
 
         </LinearLayout>
 
@@ -183,7 +195,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#504f4f"
+        android:background="#795548"
         >
         <Button
             android:layout_width="0dp"
