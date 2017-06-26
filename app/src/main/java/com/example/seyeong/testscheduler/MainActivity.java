@@ -144,6 +144,7 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
         {
             totalcnt.setTextColor(Color.RED);
             totalcnt.setText("국가자격증만 검색할 수 있습니다.");
+
             jm_fld_nm.setText(" ");
             impl_plan_nm.setText(" ");
             doc_reg_start_dt.setText(" ");
@@ -169,7 +170,7 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
             SimpleDateFormat sdf1 = new SimpleDateFormat("yyyyMMdd");
             SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy년 MM월 dd일");
 
-            totalcnt.setTextColor(Color.BLUE);
+            totalcnt.setTextColor(Color.DKGRAY);
             totalcnt.setText("검색 결과입니다.");
             jm_fld_nm.setText(jm_Fld_Nm[count]);
             impl_plan_nm.setText(impl_Plan_Nm[count]);

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.seyeong.testscheduler.MainActivity">
+    tools:context="com.example.seyeong.testscheduler.SplashActivity"
+    android:background="#795548">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,32 +42,33 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#aec0d9"></Spinner>
+            android:background="#8D6E63"></Spinner>
 
         <Spinner
             android:id="@+id/lecture"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#fde4acc0"></Spinner>
+            android:background="#A1887F"></Spinner>
 
     </LinearLayout>
 
     <TextView
+        android:background="#BCAAA4"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.5"
         android:id="@+id/totalcnt"
         android:textSize="20dp"
+        android:textColor="#A1887F"
         android:gravity="center_horizontal"/>
-
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="6"
-        android:background="#cfcdcd"
+        android:background="#D7CCC8"
 
         >
         <LinearLayout
@@ -281,7 +283,7 @@
         android:layout_height="0dp"
         android:layout_weight="0.7"
         android:orientation="horizontal"
-        android:background="#504f4f">
+        android:background="#795548">
 
         <Button
             android:id="@+id/favorite_Btn"
