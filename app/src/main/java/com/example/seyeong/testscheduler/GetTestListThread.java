@@ -131,14 +131,11 @@ public class GetTestListThread extends Thread{
         handler.post(()->{
             active=false;
             Log.e("tResponse", "is"+tResponse);
-            //if(tResponse)
-            //{
                 Log.e("cnt", ""+data);
                 data=0;
             MainActivity.test_item=slectureName;
                 MainActivity.testListThreadResponse(TotalCount, slectureCode, slectureName, industry_engr, index_a, engr, index_b, professional_engr, index_c, master_engr, index_d, craftman, index_e);
             MainActivity.testListInAutoTv(TotalCount, slectureCode, slectureName);
-            //}
         });
     }
 }

@@ -10,6 +10,9 @@ import android.support.v7.app.AppCompatActivity;
  * Created by Seyeong on 2017-06-26.
  */
 
+/*
+show splash activity
+ */
 public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

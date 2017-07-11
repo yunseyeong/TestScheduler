@@ -201,7 +201,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:background="@drawable/plus"
+            android:background="@drawable/anchor"
             android:minHeight="0dp"
             android:minWidth="0dp"
             android:id="@+id/insert_Btn"/>
@@ -210,7 +210,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:background="@drawable/mimus"
+            android:background="@drawable/remove"
             android:minHeight="0dp"
             android:minWidth="0dp"
             android:id="@+id/delete_Btn"/>
@@ -223,7 +223,7 @@
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:id="@+id/prevFavor_Btn"
-            android:background="@drawable/prev"
+            android:background="@drawable/back"
             android:minHeight="0dp"
             android:minWidth="0dp"
             />

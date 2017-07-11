@@ -28,11 +28,6 @@ import java.util.Date;
 public class MainActivity extends Activity implements TextWatcher, View.OnClickListener, AdapterView.OnItemSelectedListener {
 
     Button getBtn, prevBtn, nextBtn, favoriteBtn;
-    //EditText whatTest;
-
-    //
-
-    //
     static Spinner level, lecture;
     static String levellist[]={"기술사", "기능장", "기사", "산업기사", "기능사"};
     static String lecturelist[], codelist[];//api에서 가져올 시험과목들의 목록
@@ -40,7 +35,6 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
     static ArrayAdapter<String> spinnerLevel, spinnerLecture;
     static TextView totalcnt, jmfldnm, mdobligfldcd, mdobligfldnm, obligfldcd, obligfldnm, qualgbcd, qualgbnm, seriescd, seriesnm;
     //목록들
-//
     static TextView jm_fld_nm, impl_plan_nm, doc_reg_start_dt, doc_reg_end_dt, doc_exam_start_dt, doc_exam_end_dt, doc_pass_dt,
     doc_submit_start_dt, doc_submit_end_dt, prac_reg_start_dt, prac_reg_end_dt, prac_exam_start_dt, prac_exam_end_dt, prac_pass_start_dt, prac_pass_end_dt, oblig_fld_cd, oblig_fld_nm, mdoblig_fld_cd, mdoblig_fld_nm;
     //시험정보들
@@ -421,8 +415,6 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
                 {
                     Log.e("exception = ",""+e);
                 }
-                //whatTest.setText(lecturelist[position]);
-                //actv.setText(lecturelist[position]);
                 break;
             default:
                 break;

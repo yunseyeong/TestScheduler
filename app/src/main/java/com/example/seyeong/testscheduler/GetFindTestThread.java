@@ -241,7 +241,6 @@ public class GetFindTestThread extends Thread {
                     }
                     eventType=xpp.next();
                 }
-                //s_doc_exam_end_dt=new String[100];
             }
             catch (Exception e)
             {

@@ -288,9 +288,9 @@
         <Button
             android:id="@+id/favorite_Btn"
             android:layout_width="wrap_content"
-            android:layout_weight="0.7"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:background="@drawable/star"
+            android:background="@drawable/favorite"
             android:minHeight="0dp"
             android:minWidth="0dp"
             android:onClick="onClick" />
@@ -304,7 +304,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:id="@+id/prevBtn"
-            android:background="@drawable/prev"/>
+            android:background="@drawable/back"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
