@@ -13,11 +13,13 @@
         android:layout_marginRight="10dp"
         >
         <TextView
+            android:layout_marginBottom="7dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="즐겨찾기"
-            android:textSize="35sp"
-            android:textColor="#BCAAA4"/>
+            android:textSize="30sp"
+            android:textColor="#BCAAA4"
+            android:textAlignment="viewStart"/>
     </LinearLayout>
     <View
         android:layout_width="match_parent"
@@ -39,7 +41,7 @@
             >
             <TextView
                 android:layout_marginTop="5dp"
-                android:gravity="center_horizontal"
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -47,7 +49,7 @@
                 android:text="종목명"/>
             <TextView
                 android:layout_marginTop="5dp"
-                android:gravity="center_horizontal"
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -55,7 +57,7 @@
                 android:text="회차"/>
             <TextView
                 android:layout_marginTop="5dp"
-                android:gravity="center_horizontal"
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -64,7 +66,7 @@
 
             <TextView
                 android:layout_marginTop="5dp"
-                android:gravity="center_horizontal"
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -73,7 +75,7 @@
 
             <TextView
                 android:layout_marginTop="5dp"
-                android:gravity="center_horizontal"
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -81,7 +83,7 @@
                 android:text="필기발표"/>
             <TextView
                 android:layout_marginTop="5dp"
-                android:gravity="center_horizontal"
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -90,7 +92,7 @@
 
             <TextView
                 android:layout_marginTop="5dp"
-                android:gravity="center_horizontal"
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -99,7 +101,7 @@
 
             <TextView
                 android:layout_marginTop="5dp"
-                android:gravity="center_horizontal"
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -108,7 +110,7 @@
 
             <TextView
                 android:layout_marginTop="5dp"
-                android:gravity="center_horizontal"
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -121,6 +123,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1.9"
+            android:layout_marginLeft="10dp"
             android:background="#D7CCC8"
             android:orientation="vertical">
 
@@ -129,6 +132,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
                 android:layout_weight="1" />
 
             <TextView
@@ -136,6 +140,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
                 android:layout_weight="1" />
 
             <TextView
@@ -143,6 +148,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
                 android:layout_weight="1" />
 
             <TextView
@@ -150,6 +156,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
                 android:layout_weight="1" />
 
             <TextView
@@ -157,6 +164,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
                 android:layout_weight="1" />
 
             <TextView
@@ -164,6 +172,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
                 android:layout_weight="1" />
 
             <TextView
@@ -171,6 +180,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
                 android:layout_weight="1" />
 
             <TextView
@@ -178,6 +188,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
                 android:layout_weight="1" />
 
             <TextView
@@ -185,6 +196,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
                 android:layout_weight="1" />
 
         </LinearLayout>
@@ -196,8 +208,11 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="#795548"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         >
         <Button
+            android:layout_marginLeft="5dp"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
@@ -226,6 +241,7 @@
             android:background="@drawable/back"
             android:minHeight="0dp"
             android:minWidth="0dp"
+            android:layout_marginRight="5dp"
             />
         <Button
             android:layout_width="0dp"
@@ -235,6 +251,7 @@
             android:background="@drawable/next"
             android:minHeight="0dp"
             android:minWidth="0dp"
+            android:layout_marginRight="5dp"
             />
     </LinearLayout>
 

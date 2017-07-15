@@ -19,6 +19,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -341,7 +342,10 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
                                 where=i;
                     }
                     getFindTest(codelist[where]);
-                    //getFindTest("0752");
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(), "올해의 마지막 시험입니다.", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.prevBtn:
@@ -355,6 +359,10 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
                                 where=i;
                     }
                     getFindTest(codelist[where]);
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(), "올해의 첫 시험입니다.", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.favorite_Btn:

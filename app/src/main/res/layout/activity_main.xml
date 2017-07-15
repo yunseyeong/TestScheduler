@@ -11,7 +11,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
 
         <AutoCompleteTextView
             android:id="@+id/autoTv"
@@ -27,6 +29,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/search"
+            android:layout_marginRight="5dp"
             android:minHeight="0dp"
             android:minWidth="0dp" />
     </LinearLayout>
@@ -283,7 +286,9 @@
         android:layout_height="0dp"
         android:layout_weight="0.7"
         android:orientation="horizontal"
-        android:background="#795548">
+        android:background="#795548"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp">
 
         <Button
             android:id="@+id/favorite_Btn"
@@ -293,23 +298,31 @@
             android:background="@drawable/favorite"
             android:minHeight="0dp"
             android:minWidth="0dp"
+
+            android:layout_marginLeft="5dp"
             android:onClick="onClick" />
 
         <View
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="2"/>
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
             android:id="@+id/prevBtn"
+            android:layout_marginRight="5dp"
             android:background="@drawable/back"/>
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
             android:id="@+id/nextBtn"
+            android:layout_marginRight="5dp"
             android:background="@drawable/next"/>
     </LinearLayout>
 </LinearLayout>

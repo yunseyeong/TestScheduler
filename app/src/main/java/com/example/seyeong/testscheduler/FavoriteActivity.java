@@ -134,12 +134,20 @@ public class FavoriteActivity extends Activity implements View.OnClickListener {
                         index -= 9;
                         showFavorite();
                     }
+                    else
+                    {
+                        Toast.makeText(getApplicationContext(), "첫번째 즐겨찾기입니다.", Toast.LENGTH_SHORT).show();
+                    }
                     break;
                 case R.id.nextFavor_Btn:
                     if ((index + 9) < favorite.length) {
                         favorite = dbHelper.getResult().split("/");
                         index += 9;
                         showFavorite();
+                    }
+                    else
+                    {
+                        Toast.makeText(getApplicationContext(), "마지막 즐겨찾기입니다.", Toast.LENGTH_SHORT).show();
                     }
             }
         }catch (Exception e)
