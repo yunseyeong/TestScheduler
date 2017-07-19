@@ -12,25 +12,24 @@ import java.net.URL;
 
 /**
  * Created by Seyeong on 2017-06-07.
-
 */
+/*
+* 시험 목록을 가져오는 스레드
+* */
+
 public class GetTestListThread extends Thread{
     static public boolean active=false;
-    int data=0;
     public boolean isreceiver;
     int TotalCount;
     String[] slectureName, slectureCode;
-    //
     String[] industry_engr, engr, professional_engr, craftman, master_engr;
-    //
-    boolean blectureName,blectureCode, blectureSeries,bTotalCount;
-    boolean tResponse;
+    boolean blectureName,blectureCode, tResponse;
     String levelName;
     Handler handler;
     String Servicekey="ServiceKey=kb9YUbHdabaPOznNordxDZT0jN5tD7fAOlPnwPQYGXEPtXY1ALNit8JzdHFO%2F26JfC%2B9nNPULLEa50qF60xVGQ%3D%3D";
     String getInfo="http://openapi.q-net.or.kr/api/service/rest/InquiryListNationalQualifcationSVC/";
     String getTestFindinfo="getList?";
-    int index_a=0, index_b=0, index_c=0, index_d=0, index_e=0;
+    int index_a=0, index_b=0, index_c=0, index_d=0, index_e=0, data=0;
     public GetTestListThread(boolean receiver, String level)
     {
         Log.w("LEVEL = ", level);
