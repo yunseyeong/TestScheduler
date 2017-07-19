@@ -7,14 +7,12 @@
     android:orientation="vertical"
     tools:context="com.example.seyeong.testscheduler.SplashActivity"
     android:background="#795548">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp">
-
         <AutoCompleteTextView
             android:id="@+id/autoTv"
             android:layout_width="0dp"
@@ -22,7 +20,6 @@
             android:layout_weight="4"
             android:completionThreshold="2"
             android:hint="과목을 입력하세요" />
-
         <Button
             android:id="@+id/getBtn"
             android:layout_width="0dp"
@@ -39,21 +36,18 @@
         android:layout_height="0dp"
         android:layout_weight="0.8"
         android:orientation="horizontal">
-
         <Spinner
             android:id="@+id/level"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#8D6E63"></Spinner>
-
         <Spinner
             android:id="@+id/lecture"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#A1887F"></Spinner>
-
     </LinearLayout>
 
     <TextView
@@ -72,7 +66,6 @@
         android:layout_height="0dp"
         android:layout_weight="6"
         android:background="#D7CCC8"
-
         >
         <LinearLayout
             android:layout_width="0dp"
@@ -176,6 +169,7 @@
                 android:layout_weight="1"
                 android:text="중직무분야명"/>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -277,10 +271,9 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:id="@+id/MDOBLIG_FLD_NM"/>
-
         </LinearLayout>
-
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -289,7 +282,6 @@
         android:background="#795548"
         android:layout_marginBottom="5dp"
         android:layout_marginTop="5dp">
-
         <Button
             android:id="@+id/favorite_Btn"
             android:layout_width="wrap_content"
@@ -298,10 +290,8 @@
             android:background="@drawable/favorite"
             android:minHeight="0dp"
             android:minWidth="0dp"
-
             android:layout_marginLeft="5dp"
             android:onClick="onClick" />
-
         <View
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

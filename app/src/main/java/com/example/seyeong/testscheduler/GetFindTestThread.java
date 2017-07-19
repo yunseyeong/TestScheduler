@@ -15,18 +15,14 @@ import java.text.ParseException;
 /**
  * Created by Seyeong on 2017-06-07.
  */
-
+/*
+* 시험정보를 가져오는 스레드
+* */
 public class GetFindTestThread extends Thread {
-    Button getBtn;
-    EditText whatTest;
     static public boolean active=false;
     int data=0;
     public boolean isreceiver;
     int TotalCount;
-    String[] slectureName, slectureCode;
-    boolean blectureName,blectureCode ,bTotalCount;
-    boolean tResponse;
-    String levelName;
     Handler handler;
     String Servicekey="ServiceKey=kb9YUbHdabaPOznNordxDZT0jN5tD7fAOlPnwPQYGXEPtXY1ALNit8JzdHFO%2F26JfC%2B9nNPULLEa50qF60xVGQ%3D%3D";
     String getInfo="http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/";

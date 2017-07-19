@@ -34,7 +34,7 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
     static String lecturelist[], codelist[];//api에서 가져올 시험과목들의 목록
     static String[] industry_engr, engr, professional_engr, craftman, master_engr;
     static ArrayAdapter<String> spinnerLevel, spinnerLecture;
-    static TextView totalcnt, jmfldnm, mdobligfldcd, mdobligfldnm, obligfldcd, obligfldnm, qualgbcd, qualgbnm, seriescd, seriesnm;
+    static TextView totalcnt;
     //목록들
     static TextView jm_fld_nm, impl_plan_nm, doc_reg_start_dt, doc_reg_end_dt, doc_exam_start_dt, doc_exam_end_dt, doc_pass_dt,
     doc_submit_start_dt, doc_submit_end_dt, prac_reg_start_dt, prac_reg_end_dt, prac_exam_start_dt, prac_exam_end_dt, prac_pass_start_dt, prac_pass_end_dt, oblig_fld_cd, oblig_fld_nm, mdoblig_fld_cd, mdoblig_fld_nm;
@@ -43,9 +43,6 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
     static int count=0;//회차를 샐 카운트
     static int index=0;//arrayadapter의 인덱스 무슨시험인지를 결정
     static Context mContext;
-    //test
-    static String item[] = {"C","C++","Java",".NET","iPhone",
-            "Android","ASP.NET","PHP", "윤세영", "윤자영", "윤종석", "문영미"};
     static AutoCompleteTextView actv;
     static String[] test_item;
     //
@@ -54,20 +51,10 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
-
     }
 
     public void init()
     {
-        //autocomplete
-        /*
-        spinnerLecture=new ArrayAdapter<>(mContext, android.R.layout.simple_spinner_item, lecturelist);
-        AutoCompleteTextView ac_tv = (AutoCompleteTextView)findViewById(R.id.autoTv);
-        ac_tv.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line,lecturelist));
-        */
-
-        //
-        //
         professional_engr = new String[1000];
         industry_engr = new String[1000];
         engr = new String[1000];
@@ -96,11 +83,9 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
         mdoblig_fld_cd=(TextView)findViewById(R.id.MDOBLIG_FLD_CD);
         mdoblig_fld_nm=(TextView)findViewById(R.id.MDOBLIG_FLD_NM);
 
-        //whatTest=(EditText)findViewById(R.id.whattest);
         getBtn=(Button)findViewById(R.id.getBtn);
         prevBtn=(Button)findViewById(R.id.prevBtn);
         nextBtn=(Button)findViewById(R.id.nextBtn);
-        //
         favoriteBtn=(Button)findViewById(R.id.favorite_Btn);
         //
         level=(Spinner)findViewById(R.id.level);
@@ -108,10 +93,8 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
         level.setOnItemSelectedListener(this);
         lecture.setOnItemSelectedListener(this);
         //
-
         actv=(AutoCompleteTextView)findViewById(R.id.autoTv);
         actv.setOnItemSelectedListener(this);
-
         //
         getBtn.setOnClickListener(this);
         prevBtn.setOnClickListener(this);
@@ -137,9 +120,9 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
         Log.w("getcnt",""+getCnt);
         if(getCnt==0)
         {
+            //국가 자격증이 아닐 경우 에러메시지와 함께 텍스트뷰의 텍스트가 비어진다.
             totalcnt.setTextColor(Color.RED);
             totalcnt.setText("국가자격증만 검색할 수 있습니다.");
-
             jm_fld_nm.setText(" ");
             impl_plan_nm.setText(" ");
             doc_reg_start_dt.setText(" ");
@@ -162,6 +145,7 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
         }
         else
         {
+            //국가 자격증일 경우 해당 자격증의 정보를 출력해준다.
             SimpleDateFormat sdf1 = new SimpleDateFormat("yyyyMMdd");
             SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy년 MM월 dd일");
 
@@ -174,7 +158,6 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
                 Date date = sdf1.parse(doc_Reg_Start_Dt[count]);
                 doc_reg_start_dt.setText(sdf2.format(date));
                 //
-                //doc_reg_start_dt.setText(doc_Reg_Start_Dt[count]);
                 date = sdf1.parse(doc_Reg_End_Dt[count]);
                 doc_reg_end_dt.setText(sdf2.format(date));
 
@@ -231,33 +214,6 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
         GetTestListThread.active=true;
         GetTestListThread getTestListThread = new GetTestListThread(false, level);
         getTestListThread.start();
-    }
-    static void SeparateLevel()
-    {
-        int index_a=0, index_b=0, index_c=0, index_d=0, index_e=0;
-        for(int data=0; data<lecturelist.length; data++) {
-            if (lecturelist[data].substring(lecturelist[data].length() - 3, lecturelist[data].length()).equals("업기사")) {
-                industry_engr[index_a] = lecturelist[data];
-                index_a++;
-                break;
-            } else if (lecturelist[data].substring(lecturelist[data].length() - 2, lecturelist[data].length()).equals("기사")) {
-                engr[index_b] = lecturelist[data];
-                index_b++;
-                break;
-            } else if (lecturelist[data].substring(lecturelist[data].length() - 2, lecturelist[data].length()).equals("술사")) {
-                professional_engr[index_c] = lecturelist[data];
-                index_c++;
-                break;
-            } else if (lecturelist[data].substring(lecturelist[data].length() - 2, lecturelist[data].length()).equals("능장")) {
-                master_engr[index_d] = lecturelist[data];
-                index_d++;
-                break;
-            } else if (lecturelist[data].substring(lecturelist[data].length() - 2, lecturelist[data].length()).equals("능사")) {
-                craftman[index_e] = lecturelist[data];
-                index_e++;
-                break;
-            }
-        }
     }
 
     public static void testListInAutoTv(int cnt, String[] code, String[] test)
@@ -320,9 +276,8 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
         switch (v.getId())
         {
             case R.id.getBtn:
+                //검색 버튼 클릭
                 count=0;
-
-
                 for(int i=0; i<600; i++)
                 {
                     if(lecturelist[i] != null)
@@ -332,6 +287,7 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
                 getFindTest(codelist[where]);
                 break;
             case R.id.nextBtn:
+                //-> 버튼 클릭
                 Log.w("nextbtn", "clicked");
                 if(testCnt>count) {
                     count++;
@@ -349,6 +305,7 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
                 }
                 break;
             case R.id.prevBtn:
+                //<- 버튼 클릭
                 if(count>0)
                 {
                     count--;
@@ -366,6 +323,7 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
                 }
                 break;
             case R.id.favorite_Btn:
+                //즐겨찾기 버튼 클릭
                 Intent intent = new Intent(this, FavoriteActivity.class);
                 TextView name = (TextView)findViewById(R.id.JM_FLD_NM);
                 TextView number=(TextView)findViewById(R.id.IMPL_PLAN_NM);
@@ -405,10 +363,7 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
         {
             case R.id.level:
                 Log.e("level click", "true");
-
                 getTestList(levellist[position]);
-                //SeparateLevel();
-                Log.e("separate", "level");
                 break;
             case R.id.lecture:
                 try

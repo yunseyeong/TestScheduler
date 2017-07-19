@@ -42,12 +42,6 @@ public class SplashActivity extends AppCompatActivity {
     public boolean isNetworkConnected(Context context)
     {
         boolean isConnected = false;
-    /*
-    ConnectivityManager manager =
-            (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
-    NetworkInfo mobile = manager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
-    NetworkInfo wifi = manager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-    */
         //getNetworkInfo is deprecated!
         ConnectivityManager cm  = (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();

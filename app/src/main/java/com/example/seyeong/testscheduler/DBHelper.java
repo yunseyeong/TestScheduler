@@ -90,7 +90,6 @@ public class DBHelper extends SQLiteOpenHelper {
                     + cursor.getString(8)
                     +"/";
         }
-
         return result;
     }
 }

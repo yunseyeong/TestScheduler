@@ -18,8 +18,8 @@ import android.widget.Toast;
  */
 
 public class FavoriteActivity extends Activity implements View.OnClickListener {
-    Button insertBtn, selectBtn, deleteBtn, prevBtn, nextBtn;
-    TextView name_tv, number_tv, drs_tv, dre_tv, des_tv, docpass_tv, dss_tv, dse_tv, prs_tv, pre_tv, pes_tv, pracpass_tv;
+    Button insertBtn, deleteBtn, prevBtn, nextBtn;
+    TextView name_tv, number_tv, drs_tv, des_tv, docpass_tv, dss_tv, prs_tv, pes_tv, pracpass_tv;
     DBHelper dbHelper;
     String name, number, doc_reg_date, des, docpass, doc_submit_date, prac_reg_date, pes, pracpass;
     String[] favorite;
@@ -167,8 +167,7 @@ public class FavoriteActivity extends Activity implements View.OnClickListener {
             pes_tv.setText(favorite[index + 7]);
             pracpass_tv.setText(favorite[index + 8]);
         }
-        else
-        {
+        else{
             name_tv.setText("");
             number_tv.setText("");
             drs_tv.setText("");

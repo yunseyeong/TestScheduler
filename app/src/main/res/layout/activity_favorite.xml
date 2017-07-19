@@ -63,7 +63,6 @@
                 android:layout_weight="1"
                 android:textSize="20sp"
                 android:text="필기접수"/>
-
             <TextView
                 android:layout_marginTop="5dp"
                 android:gravity="center"
@@ -72,7 +71,6 @@
                 android:layout_weight="1"
                 android:textSize="20sp"
                 android:text="필기시험"/>
-
             <TextView
                 android:layout_marginTop="5dp"
                 android:gravity="center"
@@ -89,7 +87,6 @@
                 android:layout_weight="1"
                 android:textSize="20sp"
                 android:text="서류제출"/>
-
             <TextView
                 android:layout_marginTop="5dp"
                 android:gravity="center"
@@ -98,7 +95,6 @@
                 android:layout_weight="1"
                 android:textSize="20sp"
                 android:text="실기접수"/>
-
             <TextView
                 android:layout_marginTop="5dp"
                 android:gravity="center"
@@ -107,7 +103,6 @@
                 android:layout_weight="1"
                 android:textSize="20sp"
                 android:text="실기시험"/>
-
             <TextView
                 android:layout_marginTop="5dp"
                 android:gravity="center"
@@ -116,7 +111,6 @@
                 android:layout_weight="1"
                 android:textSize="20sp"
                 android:text="합격자발표"/>
-
         </LinearLayout>
 
         <LinearLayout
@@ -126,7 +120,6 @@
             android:layout_marginLeft="10dp"
             android:background="#D7CCC8"
             android:orientation="vertical">
-
             <TextView
                 android:id="@+id/name_textview"
                 android:layout_width="match_parent"
@@ -134,7 +127,6 @@
                 android:layout_marginTop="5dp"
                 android:gravity="center_vertical"
                 android:layout_weight="1" />
-
             <TextView
                 android:id="@+id/number_textview"
                 android:layout_width="match_parent"
@@ -142,7 +134,6 @@
                 android:layout_marginTop="5dp"
                 android:gravity="center_vertical"
                 android:layout_weight="1" />
-
             <TextView
                 android:id="@+id/drs_textview"
                 android:layout_width="match_parent"
@@ -150,7 +141,6 @@
                 android:layout_marginTop="5dp"
                 android:gravity="center_vertical"
                 android:layout_weight="1" />
-
             <TextView
                 android:id="@+id/des_textview"
                 android:layout_width="match_parent"
@@ -158,7 +148,6 @@
                 android:layout_marginTop="5dp"
                 android:gravity="center_vertical"
                 android:layout_weight="1" />
-
             <TextView
                 android:id="@+id/docpass_textview"
                 android:layout_width="match_parent"
@@ -166,7 +155,6 @@
                 android:layout_marginTop="5dp"
                 android:gravity="center_vertical"
                 android:layout_weight="1" />
-
             <TextView
                 android:id="@+id/dss_textview"
                 android:layout_width="match_parent"
@@ -174,7 +162,6 @@
                 android:layout_marginTop="5dp"
                 android:gravity="center_vertical"
                 android:layout_weight="1" />
-
             <TextView
                 android:id="@+id/prs_textview"
                 android:layout_width="match_parent"
@@ -182,7 +169,6 @@
                 android:layout_marginTop="5dp"
                 android:gravity="center_vertical"
                 android:layout_weight="1" />
-
             <TextView
                 android:id="@+id/pes_textview"
                 android:layout_width="match_parent"
@@ -190,7 +176,6 @@
                 android:layout_marginTop="5dp"
                 android:gravity="center_vertical"
                 android:layout_weight="1" />
-
             <TextView
                 android:id="@+id/pracpass_textview"
                 android:layout_width="match_parent"
@@ -198,9 +183,7 @@
                 android:layout_marginTop="5dp"
                 android:gravity="center_vertical"
                 android:layout_weight="1" />
-
         </LinearLayout>
-
     </LinearLayout>
 
     <LinearLayout
@@ -220,7 +203,6 @@
             android:minHeight="0dp"
             android:minWidth="0dp"
             android:id="@+id/insert_Btn"/>
-
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -254,5 +236,4 @@
             android:layout_marginRight="5dp"
             />
     </LinearLayout>
-
 </LinearLayout>
