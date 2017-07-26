@@ -49,7 +49,6 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
 
     public void init()
     {
-        //하나의 토스트메시지만 사용하기 위한 객체 생성
         professional_engr = new String[1000];
         industry_engr = new String[1000];
         engr = new String[1000];
@@ -242,7 +241,6 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
         craftman = new String[craft_cnt];
         craftman = craft;
         //
-
         String selected = (String)level.getSelectedItem();
         Log.e("Selected", ""+selected);
         //

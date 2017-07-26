@@ -72,8 +72,6 @@ public class FavoriteActivity extends Activity implements View.OnClickListener {
             //실기 발표일일
             pracpass = intent.getStringExtra("pracpass"); // DB
             //
-            //count = intent.getIntExtra();
-            //
             if (name != null)
                 name_tv.setText(name);
             if (number != null)
@@ -118,14 +116,12 @@ public class FavoriteActivity extends Activity implements View.OnClickListener {
             switch (v.getId()) {
                 case R.id.insert_Btn:
                     Log.e("insert", "Btn");
-                    //Toast.makeText(getApplicationContext(), "즐겨찾기 추가", Toast.LENGTH_SHORT).show();
                     Snackbar.make(v, "즐겨찾기 추가", Snackbar.LENGTH_SHORT).setAction("YES", new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
 
                         }
                     }).show();
-                    //toast 메시지를 하나만 설정하기 위함
                     favorite = dbHelper.getResult().split("/");
                     dbHelper.insert(name, number, doc_reg_date, des, docpass, doc_submit_date, prac_reg_date, pes, pracpass);
                     index = 0;
@@ -133,14 +129,12 @@ public class FavoriteActivity extends Activity implements View.OnClickListener {
                     break;
                 case R.id.delete_Btn:
                     Log.e("delete", "Btn");
-                    //Toast.makeText(getApplicationContext(), "즐겨찾기 삭제", Toast.LENGTH_SHORT).show();
                     Snackbar.make(v, "즐겨찾기 삭제", Snackbar.LENGTH_SHORT).setAction("YES", new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
 
                         }
                     }).show();
-                    //toast 메시지를 하나만 설정하기 위함
                     favorite = dbHelper.getResult().split("/");
                     String delete = name_tv.getText().toString();
                     dbHelper.delete(delete);
@@ -153,14 +147,12 @@ public class FavoriteActivity extends Activity implements View.OnClickListener {
                         index -= 9;
                         showFavorite();
                     } else {
-                        //Toast.makeText(getApplicationContext(), "첫번째 즐겨찾기입니다.", Toast.LENGTH_SHORT).show();
                         Snackbar.make(v, "첫번째 즐겨찾기 입니다.", Snackbar.LENGTH_SHORT).setAction("YES", new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
 
                             }
                         }).show();
-                        //toast 메시지를 하나만 설정하기 위함
                     }
                     break;
                 case R.id.nextFavor_Btn:
@@ -170,14 +162,12 @@ public class FavoriteActivity extends Activity implements View.OnClickListener {
                         showFavorite();
 
                     } else {
-                        //Toast.makeText(getApplicationContext(), "마지막 즐겨찾기입니다.", Toast.LENGTH_SHORT).show();
                         Snackbar.make(v, "마지막 즐겨찾기 입니다.", Snackbar.LENGTH_SHORT).setAction("YES", new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
 
                             }
                         }).show();
-                        //toast 메시지를 하나만 설정하기 위함
                     }
 
             }
