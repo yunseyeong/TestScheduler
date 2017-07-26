@@ -46,6 +46,7 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
     static AutoCompleteTextView actv;
     static String[] test_item;
     //
+    public static Toast mToast;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +56,8 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
 
     public void init()
     {
+        mToast = Toast.makeText(this, "null", Toast.LENGTH_SHORT);
+        //하나의 토스트메시지만 사용하기 위한 객체 생성
         professional_engr = new String[1000];
         industry_engr = new String[1000];
         engr = new String[1000];
@@ -301,7 +304,10 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(), "올해의 마지막 시험입니다.", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(), "올해의 마지막 시험입니다.", Toast.LENGTH_SHORT).show();
+                    mToast.setText("올해의 마지막 시험입니다.");
+                    mToast.show();
+                    //toast 메시지를 하나만 설정하기 위함
                 }
                 break;
             case R.id.prevBtn:
@@ -319,7 +325,10 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(), "올해의 첫 시험입니다.", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(), "올해의 첫 시험입니다.", Toast.LENGTH_SHORT).show();
+                    mToast.setText("올해의 첫번째 시험입니다.");
+                    mToast.show();
+                    //toast 메시지를 하나만 설정하기 위함
                 }
                 break;
             case R.id.favorite_Btn:

@@ -92,5 +92,16 @@ public class DBHelper extends SQLiteOpenHelper {
         }
         return result;
     }
+
+    public int getCount(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        //db.execSQL("select count(*) from table");
+        Cursor cursor = db.rawQuery("SELECT name FROM FAVORITEBOOK", null);
+        cursor.moveToFirst();
+        int count = cursor.getCount();
+        //int count = cursor.getCount();
+        cursor.close();
+        return count;
+    }
 }
 
