@@ -1,12 +1,10 @@
 package com.example.seyeong.testscheduler;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -26,19 +24,13 @@ public class FavoriteActivity extends Activity implements View.OnClickListener {
     String name, number, doc_reg_date, des, docpass, doc_submit_date, prac_reg_date, pes, pracpass;
     String[] favorite;
     int index = 0, count = 0;
-    //
-    public static Toast mToast; //하나의 토스트 메시지만 띄우기 위함
-    //
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favorite);
 
-        //count = dbHelper.getCount();
         try {
             Intent intent = getIntent();
-            //count = intent.getIntExtra()
-        /*TextView */
             name_tv = (TextView) findViewById(R.id.name_textview);
             number_tv = (TextView) findViewById(R.id.number_textview);
             drs_tv = (TextView) findViewById(R.id.drs_textview);
@@ -103,10 +95,7 @@ public class FavoriteActivity extends Activity implements View.OnClickListener {
             if (count != 0)
                 count_tv.setText(count);
         } catch (Exception e) {
-            //Toast.makeText(this, "" + e, Toast.LENGTH_SHORT).show();
-            mToast.setText(""+e);
-            mToast.show();
-            //toast 메시지를 하나만 설정하기 위함
+            Toast.makeText(this, "" + e, Toast.LENGTH_SHORT).show();
         }
         init();
     }
@@ -122,9 +111,6 @@ public class FavoriteActivity extends Activity implements View.OnClickListener {
         deleteBtn.setOnClickListener(this);
         prevBtn.setOnClickListener(this);
         nextBtn.setOnClickListener(this);
-        //
-        mToast = Toast.makeText(this, "null", Toast.LENGTH_SHORT); //객체 초기화
-        //
     }
 
     public void onClick(View v) {
@@ -133,8 +119,12 @@ public class FavoriteActivity extends Activity implements View.OnClickListener {
                 case R.id.insert_Btn:
                     Log.e("insert", "Btn");
                     //Toast.makeText(getApplicationContext(), "즐겨찾기 추가", Toast.LENGTH_SHORT).show();
-                    mToast.setText("즐겨찾기 추가");
-                    mToast.show();
+                    Snackbar.make(v, "즐겨찾기 추가", Snackbar.LENGTH_SHORT).setAction("YES", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+
+                        }
+                    }).show();
                     //toast 메시지를 하나만 설정하기 위함
                     favorite = dbHelper.getResult().split("/");
                     dbHelper.insert(name, number, doc_reg_date, des, docpass, doc_submit_date, prac_reg_date, pes, pracpass);
@@ -144,8 +134,12 @@ public class FavoriteActivity extends Activity implements View.OnClickListener {
                 case R.id.delete_Btn:
                     Log.e("delete", "Btn");
                     //Toast.makeText(getApplicationContext(), "즐겨찾기 삭제", Toast.LENGTH_SHORT).show();
-                    mToast.setText("즐겨찾기 삭제");
-                    mToast.show();
+                    Snackbar.make(v, "즐겨찾기 삭제", Snackbar.LENGTH_SHORT).setAction("YES", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+
+                        }
+                    }).show();
                     //toast 메시지를 하나만 설정하기 위함
                     favorite = dbHelper.getResult().split("/");
                     String delete = name_tv.getText().toString();
@@ -160,8 +154,12 @@ public class FavoriteActivity extends Activity implements View.OnClickListener {
                         showFavorite();
                     } else {
                         //Toast.makeText(getApplicationContext(), "첫번째 즐겨찾기입니다.", Toast.LENGTH_SHORT).show();
-                        mToast.setText("첫번째 즐겨찾기입니다.");
-                        mToast.show();
+                        Snackbar.make(v, "첫번째 즐겨찾기 입니다.", Snackbar.LENGTH_SHORT).setAction("YES", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+
+                            }
+                        }).show();
                         //toast 메시지를 하나만 설정하기 위함
                     }
                     break;
@@ -173,8 +171,12 @@ public class FavoriteActivity extends Activity implements View.OnClickListener {
 
                     } else {
                         //Toast.makeText(getApplicationContext(), "마지막 즐겨찾기입니다.", Toast.LENGTH_SHORT).show();
-                        mToast.setText("마지막 즐겨찾기입니다.");
-                        mToast.show();
+                        Snackbar.make(v, "마지막 즐겨찾기 입니다.", Snackbar.LENGTH_SHORT).setAction("YES", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+
+                            }
+                        }).show();
                         //toast 메시지를 하나만 설정하기 위함
                     }
 

@@ -5,25 +5,20 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInstaller;
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
+import android.support.design.widget.Snackbar;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 import java.util.Date;
 
 public class MainActivity extends Activity implements TextWatcher, View.OnClickListener, AdapterView.OnItemSelectedListener {
@@ -45,8 +40,6 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
     static Context mContext;
     static AutoCompleteTextView actv;
     static String[] test_item;
-    //
-    public static Toast mToast;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,7 +49,6 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
 
     public void init()
     {
-        mToast = Toast.makeText(this, "null", Toast.LENGTH_SHORT);
         //하나의 토스트메시지만 사용하기 위한 객체 생성
         professional_engr = new String[1000];
         industry_engr = new String[1000];
@@ -276,6 +268,7 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
         int where=0;
         String testName;
         testName = actv.getText().toString();
+
         switch (v.getId())
         {
             case R.id.getBtn:
@@ -304,10 +297,12 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
                 }
                 else
                 {
-                    //Toast.makeText(getApplicationContext(), "올해의 마지막 시험입니다.", Toast.LENGTH_SHORT).show();
-                    mToast.setText("올해의 마지막 시험입니다.");
-                    mToast.show();
-                    //toast 메시지를 하나만 설정하기 위함
+                    Snackbar.make(v, "올해의 마지막 시험입니다.", Snackbar.LENGTH_SHORT).setAction("YES", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+
+                        }
+                    }).show();
                 }
                 break;
             case R.id.prevBtn:
@@ -325,10 +320,12 @@ public class MainActivity extends Activity implements TextWatcher, View.OnClickL
                 }
                 else
                 {
-                    //Toast.makeText(getApplicationContext(), "올해의 첫 시험입니다.", Toast.LENGTH_SHORT).show();
-                    mToast.setText("올해의 첫번째 시험입니다.");
-                    mToast.show();
-                    //toast 메시지를 하나만 설정하기 위함
+                    Snackbar.make(v, "올해의 첫번째 시험입니다.", Snackbar.LENGTH_SHORT).setAction("YES", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+
+                        }
+                    }).show();
                 }
                 break;
             case R.id.favorite_Btn:
