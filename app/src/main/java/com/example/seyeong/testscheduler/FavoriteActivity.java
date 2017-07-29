@@ -109,6 +109,7 @@ public class FavoriteActivity extends Activity implements View.OnClickListener {
         deleteBtn.setOnClickListener(this);
         prevBtn.setOnClickListener(this);
         nextBtn.setOnClickListener(this);
+        //showFavorite(); //여기서 호출하면 오류발생
     }
 
     public void onClick(View v) {
@@ -150,7 +151,6 @@ public class FavoriteActivity extends Activity implements View.OnClickListener {
                         Snackbar.make(v, "첫번째 즐겨찾기 입니다.", Snackbar.LENGTH_SHORT).setAction("YES", new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-
                             }
                         }).show();
                     }
@@ -160,21 +160,18 @@ public class FavoriteActivity extends Activity implements View.OnClickListener {
                         favorite = dbHelper.getResult().split("/");
                         index += 9;
                         showFavorite();
-
                     } else {
                         Snackbar.make(v, "마지막 즐겨찾기 입니다.", Snackbar.LENGTH_SHORT).setAction("YES", new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-
                             }
                         }).show();
                     }
-
             }
-            count = dbHelper.getCount();// 총 갯수 출력 위치가 이상하니 바꿔라
+            //count = dbHelper.getCount();// 총 갯수 출력 위치가 이상하니 바꿔라
         } catch (Exception e) {
         }
-        count_tv.setText(count + "개");// 이것도 여기 두면 안될것같다
+        //count_tv.setText(count + "개");// 이것도 여기 두면 안될것같다
     }
 
     public void showFavorite() {
@@ -199,7 +196,7 @@ public class FavoriteActivity extends Activity implements View.OnClickListener {
             pes_tv.setText("");
             pracpass_tv.setText("");
         }
-
-        count_tv.setText(count + "개");
+        count = favorite.length/9;//시험당 정보가 9개이므로 정보의 갯수를 9로 나눈것이 즐겨찾기의 갯수이다.
+        count_tv.setText((index/9+1) + "/" + count + "개");
     }
 }
