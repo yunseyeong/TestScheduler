@@ -56,10 +56,12 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
     }
 */
-    public void delete(String name) {
+    public void delete(String name, String number) {
         SQLiteDatabase db = getWritableDatabase();
         // 입력한 항목과 일치하는 행 삭제
-        db.execSQL("DELETE FROM FAVORITEBOOK WHERE name='" + name + "';");
+        String sql = "DELETE FROM FAVORITEBOOK WHERE name='" + name + "'and " +"number='"+ number+ "';";
+        //db.execSQL("DELETE FROM FAVORITEBOOK WHERE name='" + name + "'and " +"number='"+ number+ "';");
+        db.execSQL(sql);
         db.close();
     }
 

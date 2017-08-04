@@ -137,8 +137,9 @@ public class FavoriteActivity extends Activity implements View.OnClickListener {
                         }
                     }).show();
                     favorite = dbHelper.getResult().split("/");
-                    String delete = name_tv.getText().toString();
-                    dbHelper.delete(delete);
+                    String delete = name_tv.getText().toString();//시험이름
+                    String delete2 = number_tv.getText().toString();//회차
+                    dbHelper.delete(delete, delete2);
                     index = 0;
                     showFavorite();
                     break;
